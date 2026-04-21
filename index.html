@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="description" content="Une déclaration unique pour Lylou, l'amour de ma vie." />
+<title>Lylou, l'amour de ma vie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Cœurs flottants en arrière-plan -->
+<div class="hearts" id="hearts" aria-hidden="true"></div>
+
+<!-- Curseur personnalisé -->
+<div class="cursor-heart" id="cursorHeart" aria-hidden="true">❤</div>
+
+<!-- HERO -->
+<section class="hero section" id="hero">
+  <div class="hero-inner reveal">
+    <span class="eyebrow">Une lettre, juste pour toi</span>
+    <svg class="heart-beat" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 21s-7.5-4.6-10-9.2C.3 8.4 2.2 4 6.2 4c2.2 0 3.7 1.2 4.8 2.8C12.1 5.2 13.6 4 15.8 4c4 0 5.9 4.4 4.2 7.8C19.5 16.4 12 21 12 21z"/>
+    </svg>
+    <h1 class="display">
+      <span class="line">Lylou</span>
+      <span class="line subtitle">est l'amour de ma vie</span>
+    </h1>
+    <p class="tagline">Pour toujours, et à jamais.</p>
+    <a href="#letter" class="scroll-cue" aria-label="Faire défiler">
+      <span></span>
+    </a>
+  </div>
+</section>
+
+<!-- LETTRE -->
+<section class="section letter" id="letter">
+  <div class="container reveal">
+    <span class="eyebrow centered">Mes mots</span>
+    <h2 class="section-title">Lylou,</h2>
+    <p class="lead">
+      Depuis le jour où nos chemins se sont croisés, le monde a pris des couleurs
+      que je ne soupçonnais pas. Tu es ma plus belle évidence, ma boussole tranquille,
+      ma raison de sourire au réveil.
+    </p>
+    <p class="lead">
+      Avec toi, le temps ne file pas, il <em>danse</em>. Et chaque seconde près de toi
+      ressemble à un secret que je voudrais garder toute la vie.
+    </p>
+  </div>
+</section>
+
+<!-- TIMELINE INTERACTIVE -->
+<section class="section timeline-section" id="timeline">
+  <div class="container">
+    <span class="eyebrow centered reveal">Notre histoire</span>
+    <h2 class="section-title reveal">Quelques instants précieux</h2>
+    <ol class="timeline">
+      <li class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <span class="t-tag">Le premier regard</span>
+          <p>Un battement, suspendu. Et déjà, l'envie de tout connaître de toi.</p>
+        </div>
+      </li>
+      <li class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <span class="t-tag">Le premier rire</span>
+          <p>Ton rire — la plus douce mélodie que je connaisse.</p>
+        </div>
+      </li>
+      <li class="t-item reveal">
+        <div class="t-dot"></div>
+        <div class="t-card">
+          <span class="t-tag">Aujourd'hui</span>
+          <p>Une question qui me brûle les lèvres depuis longtemps…</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- RAISONS (cartes interactives) -->
+<section class="section reasons" id="reasons">
+  <div class="container">
+    <span class="eyebrow centered reveal">Pourquoi toi</span>
+    <h2 class="section-title reveal">3 raisons (parmi mille)</h2>
+    <div class="cards">
+      <article class="card reveal" data-tilt>
+        <div class="card-emoji">✨</div>
+        <h3>Ta lumière</h3>
+        <p>Tu illumines les pièces avant même d'y entrer.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-emoji">💫</div>
+        <h3>Ta douceur</h3>
+        <p>Une tendresse qui rend le monde plus doux à vivre.</p>
+      </article>
+      <article class="card reveal" data-tilt>
+        <div class="card-emoji">🔥</div>
+        <h3>Ton âme</h3>
+        <p>Profonde, lumineuse, et terriblement attachante.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LA QUESTION -->
+<section class="section ask-section" id="ask">
+  <div class="container ask reveal">
+    <span class="eyebrow centered">La grande question</span>
+    <h2 class="ask-title">Lylou, veux-tu sortir avec moi ?</h2>
+    <p class="ask-sub">Réponds avec le cœur. (Indice : il n'y a qu'une bonne réponse 😉)</p>
+    <div class="buttons" id="buttons">
+      <button id="yesBtn" class="btn btn-yes" type="button">Oui 💕</button>
+      <button id="noBtn" class="btn btn-no" type="button">Non</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Fait avec ❤️ pour Lylou</p>
+</footer>
+
+<!-- Célébration plein écran -->
+<div class="celebration" id="celebration" hidden>
+  <canvas id="confetti"></canvas>
+  <div class="celebration-inner">
+    <div class="big-heart">❤️</div>
+    <h2>Je le savais !</h2>
+    <p>Je t'aime, Lylou 💕</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
